@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:id="@+id/create_notification_weekdays_picker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bt_pick_time">
+
+        <CheckBox
+            android:id="@+id/create_notification_weekdays_sunday"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/sunday_initial_letter" />
+
+        <CheckBox
+            android:id="@+id/create_notification_weekdays_monday"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/monday_initial_letter" />
+
+        <CheckBox
+            android:id="@+id/create_notification_weekdays_tuesday"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/tuesday_initial_letter" />
+
+        <CheckBox
+            android:id="@+id/create_notification_weekdays_wednesday"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/wednesday_initial_letter" />
+
+        <CheckBox
+            android:id="@+id/create_notification_weekdays_thursday"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/thursday_initial_letter" />
+
+        <CheckBox
+            android:id="@+id/create_notification_weekdays_friday"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/friday_initial_letter" />
+
+        <CheckBox
+            android:id="@+id/create_notification_weekdays_saturday"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/saturday_initial_letter" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bt_pick_time"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pick a time"
+        app:layout_constraintBottom_toTopOf="@+id/switch_notification"/>
+
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/switch_notification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+
+    <TextView
+        android:id="@+id/tv_notification_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/switch_notification"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="Enable Notification"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
